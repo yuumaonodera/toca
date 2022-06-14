@@ -8,7 +8,8 @@
 </head>
 
 <body>
-  <h1>タイトル</h1>
+  @include('resources. index.balde.php')
+  <h1>{{$content}}</h1>
 </body>
 
 </html>

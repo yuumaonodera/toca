@@ -8,8 +8,6 @@
 </head>
 
 <body>
-  <h1>タイトル</h1>
-  <form action='/category' method="POST"></form>
 </body>
 
 </html>
