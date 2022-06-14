@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  @include('resources. header.blade.php')
+  @include('header')
 </body>
 
 </html>

@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Htttp\Controllers;
 
-use App\Models\Todo;
+use App\Models\Category;
 use Illuminate\Http\Request;
+
 
 class CategoryController extends Controller
 {
     public function index()
     {
-       $item = Todo::all();
+       $item = Category::all();
        return view('index', ['item' => $item]);
     }
     public function create()
@@ -19,7 +20,7 @@ class CategoryController extends Controller
         ];
         $this->validate($request, $validate_rule);
         $form = $request->all();
-        Todo::create($form);
+        Category::create($form);
         return redirect('/');
     }
 }
