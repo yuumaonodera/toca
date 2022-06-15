@@ -35,6 +35,7 @@
     }
     table {
       margin-left:366px;
+      border-collapse:collapse;
     }
     tr {
       border-bottom:solid 2px lavender;
@@ -44,10 +45,19 @@
       padding-bottom:9px;
       padding-left:13px;
       font-family:"Franklin Gothic";
-      border-bottom:solid 2px lavender;
     }
     .button-update {
-      margin-left:100px;
+      margin-left:534px;
+      padding:3px 10px 3px 10px;
+      background:blue;
+      color:white;
+      border:none;
+    }
+    .button-delete {
+      padding:3px 10px 3px 10px;
+      background:red;
+      color:white;
+      border:none;
     }
   </style>
   @include('header')
