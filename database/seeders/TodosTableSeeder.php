@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 
 class TodosTableSeeder extends Seeder
-{
-    /**
+{/**
      * Run the database seeds.
      *
      * @return void
@@ -20,4 +19,6 @@ class TodosTableSeeder extends Seeder
         'content' => 'minatozaki',
       ];
       DB::table('todos')->insert($param);
+    }
 }
+
