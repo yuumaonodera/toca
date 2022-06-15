@@ -33,6 +33,22 @@
       margin-right:410px;
       padding-left:10px;
     }
+    table {
+      margin-left:366px;
+    }
+    tr {
+      border-bottom:solid 2px lavender;
+    }
+    td {
+      padding-top:9px;
+      padding-bottom:9px;
+      padding-left:13px;
+      font-family:"Franklin Gothic";
+      border-bottom:solid 2px lavender;
+    }
+    .button-update {
+      margin-left:100px;
+    }
   </style>
   @include('header')
     <div class="content">
@@ -54,11 +70,15 @@
     <div class="title">
       <h1>category</h1>
     </div>
+    <table>
     @foreach($item as $category)
     <tr>
-      <td>{{$category->created_at}}</td>
+      <td>{{$category->content}}</td>
+      <td><button class="button-update">更新</button></td>
+      <td><button class="button-delete">削除</button></td>
     </tr>
     @endforeach
+    </table>
 </body>
 
 </html>
