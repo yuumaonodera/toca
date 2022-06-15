@@ -18,7 +18,7 @@ Use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('?category', function () {
+Route::get('/category', function () {
     return view('welcame');
 });
 
