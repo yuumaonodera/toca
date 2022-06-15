@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  @include('header')
   <h1>湊崎 sana</h1>
 </body>
 

@@ -9,6 +9,7 @@
 
 <body>
   @include('header')
+  <h1>huhuhu</h1>
 </body>
 
 </html>
