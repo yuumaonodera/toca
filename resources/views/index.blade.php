@@ -34,7 +34,7 @@
       margin-left:23%;
       margin-top:60px;
     }
-    .content {
+    .contentr {
       margin-left:23%;
     }
     .subtitle {
@@ -63,12 +63,12 @@
       @endif
       <div class="card">
         <h1 class="title">新規作成</h1>
-        <input type="text" name="con" size="50px">
+        <input type="text" name="content" size="50px">
         <button class="button-create">作成</button>
       </div>
     </form>
   </div>
-  <div class="content">
+  <div class="contentr">
     <h1 class="sub">Todo検索</h1>
     <input type="text" name="search" size="50px">
     <button class="button-search">検索</button>
