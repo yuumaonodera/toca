@@ -12,7 +12,7 @@ class TodoController extends Controller
     {
         $item = Todo::all();
         $word = Category::all();
-        return view('inedx', ['item' => $item,
+        return view('index', ['item' => $item,
     'word' => $word]);
     }
     public function create(Request $request)
