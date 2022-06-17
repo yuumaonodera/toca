@@ -45,9 +45,23 @@
     }
     h3 {
       margin-bottom:5px;
+      padding-left:10px;
     }
     .category {
       padding-left:43%;
+    }
+    table {
+      border-collapse:collapse;
+      margin-left:23%;
+    }
+    td {
+      border-bottom:solid 2px black;
+      padding-left:10px;
+      padding-bottom:10px;
+      padding-top:10px;
+    }
+    .button-update {
+
     }
   </style>
   @include('header')
@@ -64,6 +78,13 @@
       <div class="card">
         <h1 class="title">新規作成</h1>
         <input type="text" name="content" size="50px">
+        <p>
+          <lavel><b>カテゴリ</b></lavel>
+          <select type="text" name="content" value="{{$word->$category}}">
+            @foreach($word as $category)
+            <option value="{{$word -> $category}}"></option>
+            @endforeach
+        </p>
         <button class="button-create">作成</button>
       </div>
     </form>

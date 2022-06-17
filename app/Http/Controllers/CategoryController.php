@@ -21,6 +21,6 @@ class CategoryController extends Controller
         $this->validate($request, $validate_rule);
         $form = $request->all();
         Category::create($form);
-        return redirect('/');
+        return redirect('/category');
     }
 }

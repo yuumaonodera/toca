@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class TodoController extends Controller
@@ -10,7 +11,9 @@ class TodoController extends Controller
     public function index()
     {
         $item = Todo::all();
-        return view('index', ['item' => $item]);
+        $word = Category::all();
+        return view('inedx', ['item' => $item,
+    'word' => $word]);
     }
     public function create(Request $request)
     {

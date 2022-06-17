@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TodoController;
-Use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TodoTController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +24,6 @@ Route::get('/category', function () {
 
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/', [TodoController::class, 'create']);
+Route::get('/', [CategoryController::class, 'index']);
 Route::get('/category', [CategoryController::class, 'index']);
 Route::post('/category', [CategoryController::class, 'create']);
