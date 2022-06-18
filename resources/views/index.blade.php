@@ -94,7 +94,7 @@
         <input type="text" name="content" size="50px">
           <lavel><b>カテゴリ</b></lavel>
           <select type="text" name="content" >
-            @foreach ($item as $category)
+            @foreach ($item->categories as $category)
             <option value="{{ $category->id }}">{{  $category->content }}</option>
             @endforeach
           </select>
