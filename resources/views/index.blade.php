@@ -93,8 +93,8 @@
         <h1 class="title">新規作成</h1>
         <input type="text" name="content" size="50px">
           <lavel><b>カテゴリ</b></lavel>
-          <select type="text" name="content" >
-            @foreach ($item->categories as $category)
+          <select type="text" name="categories" >
+            @foreach ($item as $category)
             <option value="{{ $category->id }}">{{  $category->content }}</option>
             @endforeach
           </select>
@@ -104,7 +104,7 @@
   </div>
   <div class="contentr">
     <h1 class="sub">Todo検索</h1>
-    <input type="text"name="search"size="50px"> 
+    <input type="text" name="search" size="50px"> 
     <lavel><b>カテゴリ</b></lavel>
     <select type="text" name="content">
       @foreach($word as $category)
