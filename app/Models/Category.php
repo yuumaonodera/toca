@@ -10,4 +10,11 @@ class Category extends Model
     use HasFactory;
 
     protected $fillable = ['content', 'created_at', 'update_at'];
+
+    public function getTitle() {
+        return 'カテゴリ' .$this->content . ':' . $this->title;
+    }
+    public function todos() {
+        return $this->hasMany('App\Models\Todo');
+    }
 }

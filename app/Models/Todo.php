@@ -10,4 +10,11 @@ class Todo extends Model
     use HasFactory;
 
     protected $fillable = ['content', 'created_at', 'update_at'];
+
+    public function getTitle() {
+        return 'カテゴリ' .$this->content . ':' . $this->title;
+    }
+    public function categories() {
+        return $this->hasMany('App\Models\Category');
+    }
 }

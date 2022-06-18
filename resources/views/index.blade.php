@@ -94,8 +94,8 @@
         <input type="text" name="content" size="50px">
           <lavel><b>カテゴリ</b></lavel>
           <select type="text" name="content" >
-            @foreach($word as $category)
-            <option value="{{ $category->id }}">{{ $category->content }}</option>
+            @foreach ($item as $category)
+            <option value="{{ $category->id }}">{{  $category->content }}</option>
             @endforeach
           </select>
         <button class="button-create">作成</button>
