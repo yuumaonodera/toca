@@ -126,10 +126,13 @@
       <form mathod="POST" action="update/{{$todo->id}}">
         @csrf
         <td><input type="text" name="content" value="{{$todo->content}}"></td>
-        <td><h5 class="uhauha">{{$category->content}}</h5></td>
+        <td><h5 class="uhauha">{{$todo->category->content}}</h5></td>
         <td><button class="button-update">更新</button></td>
       </form>
-      <td><button class="button-delete">削除</button></td>
+      <form method="POST" action="delete/{{$todo->id}}">
+        @csrf
+        <td><button class="button-delete">削除</button></td>
+      </form>
   </tr>
   @endforeach
   </table>

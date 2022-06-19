@@ -25,5 +25,6 @@ Route::get('/category', function () {
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/', [TodoController::class, 'create']);
 Route::get('/update/{todo}', [TodoController::class, 'update']);
+Route::post('/delete/{todo}', [TodoController::class, 'delete']);
 Route::get('/category', [CategoryController::class, 'index']);
 Route::post('/category', [CategoryController::class, 'create']);

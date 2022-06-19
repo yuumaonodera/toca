@@ -18,6 +18,6 @@ class Todo extends Model
         return $this->hasMany('App\Models\Category');
     }
     public function category() {
-        return $this->belongsTo('App\Modeles\Category');
+        return $this->belongsTo('App\Models\Category');
     }
 }
