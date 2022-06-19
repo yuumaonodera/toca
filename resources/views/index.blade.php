@@ -68,7 +68,7 @@
       border:none;
     }
     .button-update {
-      margin-left:205px;
+      margin-left:220px;
       padding:3px 13px 3px 13px;
       background:red;
       color:white;
@@ -76,6 +76,9 @@
     }
     h5 {
       margin-left:240px;
+    }
+    .uhauha {
+      margin-left:140px;
     }
   </style>
   @include('header')
@@ -120,8 +123,10 @@
   <table>
   @foreach($item as $todo)
   <tr>
-      <td>{{$todo->content}}</td>
-      <td><h5 class="uiguigig">{{$category->content}}</h5></td>
+      <form mathod="POST" action="update/{{$todo->id}}">
+        @csrf
+        <td><input type="text" name="content" value="{{$todo->content}}"></td>
+      <td><h5 class="uhauha">{{$category->content}}</h5></td>
       <td><button class="button-update">更新</button></td>
       <td><button class="button-delete">削除</button></td>
   </tr>
