@@ -110,7 +110,8 @@
   </div>
   <div class="contentr">
     <h1 class="sub">Todo検索</h1>
-    <input type="text" name="search" size="50px"> 
+    <input type="text" name="search" size="50px"
+    value="{{$input}}"> 
     <lavel><b>カテゴリ</b></lavel>
     <select type="text" name="categories_id">
       @foreach($word as $category)
