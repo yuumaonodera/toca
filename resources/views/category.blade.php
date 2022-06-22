@@ -45,9 +45,11 @@
       padding-bottom:9px;
       padding-left:13px;
       font-family:"Franklin Gothic";
+      margin-right:20%;
+      padding-right:10px;
     }
     .button-update {
-      margin-left:534px;
+      margin-left:420px;
       padding:3px 10px 3px 10px;
       background:blue;
       color:white;
@@ -57,6 +59,9 @@
       padding:3px 10px 3px 10px;
       background:red;
       color:white;
+      border:none;
+    }
+    .up {
       border:none;
     }
   </style>
@@ -83,9 +88,15 @@
     <table>
     @foreach($item as $category)
     <tr>
-      <td>{{$category->content}}</td>
-      <td><button class="button-update">更新</button></td>
-      <td><button class="button-delete">削除</button></td>
+      <form method="POST" action="update/{{$category->id}}">
+        @csrf
+        <td><input type="text" class="up" name="content" value="{{$category->content}}"></td>
+        <td><button class="button-update">更新</button></td>
+      </form>
+      <form method="POST" action="{{$category->id}}/delete">
+        @csrf
+        <td><button class="button-delete">削除</button></td>
+      </form>
     </tr>
     @endforeach
     </table>

@@ -36,10 +36,14 @@ class TodoController extends Controller
         Todo::where('id', $id)->update($form);
         return redirect('/');
     }
-    public function delete(Request $request)
+    public function delete($todo,Request $request)
     {
-        $author = Todo::find($request->id);
-        Todo::find($request->id)->delete($request);
+        $author = Todo::find($todo);
+        Todo::find($todo)->delete($author);
         return redirect('/');
+    }
+    public function show($todo)
+    {
+        return $todo;
     }
 }

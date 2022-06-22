@@ -63,14 +63,14 @@
     .button-delete {
       margin-left:10px;
       padding:3px 13px 3px 13px;
-      background:blue;
+      background:red;
       color:white;
       border:none;
     }
     .button-update {
       margin-left:220px;
       padding:3px 13px 3px 13px;
-      background:red;
+      background:blue;
       color:white;
       border:none;
     }
@@ -79,6 +79,9 @@
     }
     .uhauha {
       margin-left:140px;
+    }
+    .up {
+      border:none;
     }
   </style>
   @include('header')
@@ -125,8 +128,8 @@
   <tr>
       <form mathod="POST" action="update/{{$todo->id}}">
         @csrf
-        <td><input type="text" name="content" value="{{$todo->content}}"></td>
-        <td><h5 class="uhauha">{{$todo->category->content}}</h5></td>
+        <td><input type="text" class="up" name="content" value="{{$todo->content}}"></td>
+        <td><h5 class="uhauha">{{$category->content}}</h5></td>
         <td><button class="button-update">更新</button></td>
       </form>
       <form method="POST" action="delete/{{$todo->id}}">
