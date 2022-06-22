@@ -31,13 +31,13 @@ class CategoryController extends Controller
         $form = $request->all();
         unset($form['_token']);
         Category::where('id', $id)->update($form);
-        return redirect('/');
+        return redirect('/category');
     }
     public function delete($category,Request $request)
     {
         $author = Category::find($category);
         Category::find($category)->delete($author);
-        return redirect('/');
+        return redirect('/category');
     }
     public function show($category)
     {

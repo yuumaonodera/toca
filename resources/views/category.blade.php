@@ -90,7 +90,7 @@
     <tr>
       <form method="POST" action="update/{{$category->id}}">
         @csrf
-        <td><input type="text" class="up" name="content" value="{{$category->content}}"></td>
+        <td><input type="text" class="up" name="content" value="{{$category->content}}" ></td>
         <td><button class="button-update">更新</button></td>
       </form>
       <form method="POST" action="{{$category->id}}/delete">

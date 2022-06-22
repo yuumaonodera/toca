@@ -41,7 +41,7 @@
     }
     .subtitle {
       display:flex;
-      border-bottom:solid 2px black;
+      border-bottom:solid 2px lavender;
       margin-right:30%;
       margin-left:23%;
     }
@@ -57,7 +57,7 @@
       margin-left:23%;
     }
     td {
-      border-bottom:solid 2px black;
+      border-bottom:solid 2px lavender;
       padding-left:10px;
     }
     .button-delete {
@@ -68,7 +68,7 @@
       border:none;
     }
     .button-update {
-      margin-left:220px;
+      margin-left:210px;
       padding:3px 13px 3px 13px;
       background:blue;
       color:white;
@@ -78,7 +78,7 @@
       margin-left:240px;
     }
     .uhauha {
-      margin-left:140px;
+      margin-left:130px;
     }
     .up {
       border:none;
@@ -129,7 +129,7 @@
       <form mathod="POST" action="update/{{$todo->id}}">
         @csrf
         <td><input type="text" class="up" name="content" value="{{$todo->content}}"></td>
-        <td><h5 class="uhauha">{{$category->content}}</h5></td>
+        <td><h5 class="uhauha">{{$todo->category->content}}</h5></td>
         <td><button class="button-update">更新</button></td>
       </form>
       <form method="POST" action="delete/{{$todo->id}}">

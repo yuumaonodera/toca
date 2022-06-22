@@ -29,7 +29,9 @@ Route::post('/delete/{todo}', [TodoController::class, 'delete']);
 
 Route::get('/delete/{todo}', [TodoController::class, 'show']);
 
-Route::post('/update/{category}', [CategoryController::class, 'update']);
+Route::post('/search', [TodoController::class, 'search']);
+
+Route::post('/update/{update}', [CategoryController::class, 'update']);
 Route::get('/category', [CategoryController::class, 'index']);
 Route::post('/category', [CategoryController::class, 'create']);
 
