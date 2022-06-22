@@ -110,15 +110,17 @@
   </div>
   <div class="contentr">
     <h1 class="sub">Todo検索</h1>
-    <input type="text" name="search" size="50px"
-    value="{{$input}}"> 
-    <lavel><b>カテゴリ</b></lavel>
-    <select type="text" name="categories_id">
-      @foreach($word as $category)
-      <option value="{{ $category->id }}">{{ $category->content }}</option>
-      @endforeach
-    </select>
-    <button class="button-search">検索</button>
+    <form mathod="GET" action="/search">
+      @csrf
+       <input type="text" name="search" size="50px"> 
+       <lavel><b>カテゴリ</b></lavel>
+       <select type="text" name="categories_id">
+         @foreach($word as $category)
+         <option value="{{ $category->id }}">{{ $category->content }}</option>
+         @endforeach
+       </select>
+       <button class="button-search">検索</button>
+    </form>
   </div>
   <div class="subtitle">
       <h3>Todo</h3>

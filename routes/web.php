@@ -29,7 +29,7 @@ Route::post('/delete/{todo}', [TodoController::class, 'delete']);
 
 Route::get('/delete/{todo}', [TodoController::class, 'show']);
 
-Route::post('/search', [TodoController::class, 'search']);
+Route::get('/search', [TodoController::class, 'search']);
 
 Route::post('/update/{update}', [CategoryController::class, 'update']);
 Route::get('/category', [CategoryController::class, 'index']);
