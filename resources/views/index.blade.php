@@ -112,7 +112,7 @@
     <h1 class="sub">Todo検索</h1>
     <form mathod="GET" action="/search">
       @csrf
-       <input type="text" name="{{$todo->content}}" size="50px"> 
+       <input type="text" name="content" size="50px"> 
        <lavel><b>カテゴリ</b></lavel>
        <select type="text" name="categories_id">
          @foreach($word as $category)
