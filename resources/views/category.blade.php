@@ -11,7 +11,7 @@
   <style>
     .content {
       margin-top:70px;
-      margin-left:370px;
+      margin-left:24%;
     }
     input {
       height:30px;
@@ -21,20 +21,20 @@
       background:black;
       color:white;
       padding:6px 55px 6px 55px;
-      margin-left:80px;
+      margin-left:5%;
     }
     .title {
       font-family:"Book Antiqua";
       font-size:11px;
-      margin-left:370px;
+      margin-left:24%;
       margin-top:50px;
       border-bottom:solid 2px black;
       border-color:lavender;
-      margin-right:410px;
+      margin-right:28%;
       padding-left:10px;
     }
     table {
-      margin-left:366px;
+      margin-left:24%;
       border-collapse:collapse;
     }
     tr {
@@ -49,7 +49,7 @@
       padding-right:10px;
     }
     .button-update {
-      margin-left:420px;
+      margin-left:410px;
       padding:3px 10px 3px 10px;
       background:blue;
       color:white;

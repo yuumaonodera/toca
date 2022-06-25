@@ -42,15 +42,15 @@
     .subtitle {
       display:flex;
       border-bottom:solid 2px lavender;
-      margin-right:30%;
       margin-left:23%;
+      margin-right:30%;
     }
     h3 {
       margin-bottom:5px;
       padding-left:10px;
     }
     .category {
-      padding-left:36%;
+      padding-left:35%;
     }
     table {
       border-collapse:collapse;
@@ -112,7 +112,7 @@
     <h1 class="sub">Todo検索</h1>
     <form mathod="GET" action="/search">
       @csrf
-       <input type="text" name="search" size="50px"> 
+       <input type="text" name="{{$todo->content}}" size="50px"> 
        <lavel><b>カテゴリ</b></lavel>
        <select type="text" name="categories_id">
          @foreach($word as $category)
