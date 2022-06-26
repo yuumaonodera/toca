@@ -100,6 +100,7 @@
         <input type="text" name="content" size="50px">
           <lavel><b>カテゴリ</b></lavel>
           <select type="text" name="category_id" >
+            <option value="{{ $category->id }}">{{ $request->category_id }}</option>
             @foreach ($word as $category)
             <option value="{{ $category->id }}">{{  $category->content }}</option>
             @endforeach
@@ -114,7 +115,7 @@
       @csrf
        <input type="text" name="content" size="50px"> 
        <lavel><b>カテゴリ</b></lavel>
-       <select type="text" name="categories_id">
+       <select type="text" name="category_id">
          @foreach($word as $category)
          <option value="{{ $category->id }}">{{ $category->content }}</option>
          @endforeach

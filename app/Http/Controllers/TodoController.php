@@ -48,7 +48,7 @@ class TodoController extends Controller
     }
     public function search(Request $request)
     {
-        $item = Todo::where('content'  , 'LIKE',"%{$request->content}%")->where('category_id' , 'LIKE' , "%{$request->content}%")->get();
+        $item = Todo::where('content'  , 'LIKE',"%{$request->content}%")->where('category_id' , 'LIKE' , "%{$request->category_id}%")->get();
         $word = Category::all();
         $param = [
             'item' => $item,
