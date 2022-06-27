@@ -43,7 +43,7 @@
       display:flex;
       border-bottom:solid 2px lavender;
       margin-left:23%;
-      margin-right:30%;
+      margin-right:463px;
     }
     h3 {
       margin-bottom:5px;
@@ -68,7 +68,7 @@
       border:none;
     }
     .button-update {
-      margin-left:210px;
+      margin-left:200px;
       padding:3px 13px 3px 13px;
       background:blue;
       color:white;
@@ -82,6 +82,12 @@
     }
     .up {
       border:none;
+    }
+    select {
+      padding-top: 8px;
+      padding-bottom:8px;
+      padding-left:4px;
+      padding-right:29px;
     }
   </style>
   @include('header')
@@ -98,9 +104,8 @@
       <div class="card">
         <h1 class="title">新規作成</h1>
         <input type="text" name="content" size="50px">
-          <lavel><b>カテゴリ</b></lavel>
           <select type="text" name="category_id" >
-            <option value="{{ $category->id }}">{{ $request->category_id }}</option>
+            <option value="" class="category_title">カテゴリ</option>
             @foreach ($word as $category)
             <option value="{{ $category->id }}">{{  $category->content }}</option>
             @endforeach
@@ -114,8 +119,8 @@
     <form mathod="GET" action="/search">
       @csrf
        <input type="text" name="content" size="50px"> 
-       <lavel><b>カテゴリ</b></lavel>
        <select type="text" name="category_id">
+        <option value="" class="category_title">カテゴリ</option>
          @foreach($word as $category)
          <option value="{{ $category->id }}">{{ $category->content }}</option>
          @endforeach
