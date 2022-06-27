@@ -13,7 +13,7 @@ class ClientRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == '/') {
+        if ($this->path() == '/verror') {
             return true;
         } else {
             return false;
@@ -28,9 +28,15 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            'content.required' =>'Todoを入力してください'
-            'content.max:20' => 'Todoを20文字以内に入力してください'
+            'content' => 'required | max:20 | string'
 
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'content.required' => 'Todoを入力してください'
+            'content.max:20' => 'Todoを20文字以内に入力してください'
         ];
     }
     protected function getRedirectUrl()
