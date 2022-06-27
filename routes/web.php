@@ -31,6 +31,8 @@ Route::get('/delete/{todo}', [TodoController::class, 'show']);
 
 Route::get('/search', [TodoController::class, 'search']);
 
+Route::get('/verror', [TodoController::class, 'verror']);
+
 Route::post('/update/{update}', [CategoryController::class, 'update']);
 Route::get('/category', [CategoryController::class, 'index']);
 Route::post('/category', [CategoryController::class, 'create']);

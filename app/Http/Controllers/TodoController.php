@@ -18,7 +18,8 @@ class TodoController extends Controller
     public function create(Request $request)
     {
         $validate_rule = [
-            'content' => 'required | max:20'
+            'content' => 'required | max:20 |
+            string'
         ];
         $this->validate($request, $validate_rule);
         $form = $request->all();
@@ -28,7 +29,7 @@ class TodoController extends Controller
     public function update($id, Request $request)
     {
         $validate_rule = [
-            'content' => 'required | max:20'
+            'content' => 'required | max:20 | string'
         ];
         $this->validate($request, $validate_rule);
         $form = $request->all();
@@ -56,5 +57,9 @@ class TodoController extends Controller
             'input' => $request->input
         ];
         return view( 'index', $param);
+    }
+    public function verror()
+    {
+        return view('index');
     }
 } 

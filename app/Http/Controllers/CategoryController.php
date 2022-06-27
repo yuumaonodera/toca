@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function create(Request $request)
     {
         $validate_rule = [
-            'content'  => 'required | max:20'
+            'content'  => 'required | max:10 | string'
         ];
         $this->validate($request, $validate_rule);
         $form = $request->all();
@@ -26,7 +26,8 @@ class CategoryController extends Controller
     public function update($id, Request $request)
     {
         $validate_rule = [
-            'content' => 'required | max:20'
+            'content' => 'required | max:10 |
+            string'
         ];
         $form = $request->all();
         unset($form['_token']);
