@@ -85,7 +85,7 @@ return [
     'max' => [
         'numeric' => 'The :attribute must not be greater than :max.',
         'file' => 'The :attribute must not be greater than :max kilobytes.',
-        'string' => 'Todoは、:max文字以下を指定してください',
+        'string' => 'attributeは、:max文字以下を指定してください',
         'array' => 'The :attribute must not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',
@@ -159,7 +159,7 @@ return [
     */
 
     'attributes' => [
-      'content' => 'Todo',
+      'content' => '',
       'category_id' => 'カテゴリ',
     ],
 
