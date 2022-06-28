@@ -84,7 +84,7 @@
         </ul>
         @endif
         <div class="create">
-          <input type="text" name="content" size="70px">
+          <input type="text" name="name" size="70px">
           <button class="button-create">作成</button>
         </div>
       </form>
@@ -97,7 +97,7 @@
     <tr>
       <form method="POST" action="update/{{$category->id}}">
         @csrf
-        <td><input type="text" class="up" name="content" value="{{$category->content}}" ></td>
+        <td><input type="text" class="up" name="name" value="{{$category->name}}" ></td>
         <td><button class="button-update">更新</button></td>
       </form>
       <form method="POST" action="{{$category->id}}/delete">
