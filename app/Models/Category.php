@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['content', 'category_id','created_at', 'update_at'];
+    protected $fillable = ['name', 'category_id','created_at', 'update_at'];
 
     public function getTitle() {
         return 'カテゴリ' .$this->content . ':' . $this->title;

@@ -40,7 +40,6 @@
     td {
       padding-top:9px;
       padding-bottom:9px;
-      padding-left:13px;
       font-family:"Franklin Gothic";
       margin-right:20%;
       padding-right:10px;
@@ -60,6 +59,7 @@
     }
     .up {
       border:none;
+      padding-left:-20px;
     }
     ul {
       background:pink;

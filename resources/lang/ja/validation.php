@@ -159,8 +159,9 @@ return [
     */
 
     'attributes' => [
-      'content' => '',
+      'content' => 'Todo',
       'category_id' => 'カテゴリ',
+      'name' => 'カテゴリ',
     ],
 
 ];
