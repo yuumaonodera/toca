@@ -19,7 +19,8 @@ class TodoController extends Controller
     {
         $validate_rule = [
             'content' => 'required | max:20 |
-            string'
+            string',
+            'category_id' => 'required'
         ];
         $this->validate($request, $validate_rule);
         $form = $request->all();

@@ -13,7 +13,7 @@ class ClientRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == '/verror') {
+        if ($this->path() == '/v') {
             return true;
         } else {
             return false;

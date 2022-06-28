@@ -89,6 +89,14 @@
       padding-left:4px;
       padding-right:29px;
     }
+    ul {
+      background:pink;
+      color:red;
+      margin-top:-5px;
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+
   </style>
   @include('header')
   <div class="index">

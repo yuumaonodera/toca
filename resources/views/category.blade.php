@@ -9,13 +9,10 @@
 
 <body>
   <style>
-    .content {
-      margin-top:70px;
-      margin-left:24%;
-    }
     input {
       height:30px;
       border-color: lavender;
+      margin-left:24%;
     }
     .button-create {
       background:black;
@@ -64,6 +61,16 @@
     .up {
       border:none;
     }
+    ul {
+      background:pink;
+      color:red;
+      margin-top:-10px;
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+    .create {
+      margin-top:80px;
+    }
   </style>
   @include('header')
     <div class="content">
@@ -76,7 +83,7 @@
           @endforeach
         </ul>
         @endif
-        <div>
+        <div class="create">
           <input type="text" name="content" size="70px">
           <button class="button-create">作成</button>
         </div>
